@@ -42,7 +42,7 @@ body {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding: 2rem;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .bill, .people {
@@ -54,6 +54,10 @@ body {
     width: 100%;
     gap: .25rem;
 }
+.tip > label {
+    margin-bottom: 1rem;
+}
+
 .tips {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -102,6 +106,18 @@ input {
 
 input::placeholder { 
     color: var(--dark-grayish-cyan); 
+}
+
+input:focus {
+    outline: none;
+}
+
+/* Remove Spinner */
+/* For Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .result {
@@ -171,7 +187,15 @@ span {
     font-weight: 600;
     padding: .8rem 0;
 }
+.btn-reset:hover {
+    background-color: var(--light-grayish-cyan);
+}
 
 .active {
     background-color: var(--strong-cyan);
+}
+
+
+.focus {
+    outline: 2px solid var(--strong-cyan);
 }
