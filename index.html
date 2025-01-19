@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,20 +21,32 @@
     <div class="banner">
       <img src="./images/logo.svg" alt="logo">
     </div>
-    <div class="card">
-      <div class="bill">
+    <div class="card flex-start">
+      <div class="bill flex-start">
         <label for="bill">Bill</label>
         <input type="number" id="bill"> 
       </div>
-      <div class="tip">
+      <div class="tip flex-start">
         <label for="tip">Select Tip %</label>
         <div class="tips">
-          <button class="tip-5">5%</button>
-          <button class="tip-10">10%</button>
-          <button class="tip-15">15%</button>
-          <button class="tip-25">25%</button>
-          <button class="tip-50">50%</button>
-          <input type="number" id="tip" class="custom-tip-input">
+          <div class="tips-opt">
+            <button class="tip-5">5%</button>
+          </div>
+          <div class="tips-opt">
+            <button class="tip-10">10%</button>
+          </div>
+          <div class="tips-opt">
+            <button class="tip-15">15%</button>
+          </div>
+          <div class="tips-opt">
+            <button class="tip-25">25%</button>
+          </div>
+          <div class="tips-opt">
+            <button class="tip-50">50%</button>
+          </div>
+          <div class="tips-opt">
+            <input type="number" id="tip" name="tip" class="custom-tip-input" placeholder="Custom">
+          </div>
         </div>
       </div>
       <div class="people">

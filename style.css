@@ -1,0 +1,72 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: yellowgreen;
+}
+
+.card {
+    /* width: fit-content; */
+    background-color: var(--white);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding: 2rem;
+}
+
+.bill {
+    width: 100%;
+    gap: .25rem;
+    background-color: red;
+}
+
+label {
+    color: var(--grayish-cyan);
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.tip {
+    width: 100%;
+    gap: .25rem;
+    background-color: brown;
+}
+
+input {
+    width: 100%;
+    background-color: var(--light-grayish-cyan);
+    padding: .5rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+}
+
+.flex-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
