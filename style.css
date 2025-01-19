@@ -214,6 +214,10 @@ span {
     color: var(--very-dark-cyan);
 }
 
+button {
+    transition: all .3s ease-in-out;  
+}
+
 .active {
     background-color: var(--strong-cyan);
 }
