@@ -27,7 +27,9 @@
     </div>
     <div class="card flex-start">
       <div class="bill flex-start">
-        <label for="bill">Bill</label>
+        <div class="labelling">
+          <label for="bill">Bill</label><span class="error" id="error">Error</span>
+        </div>
         <div class="input-group">
           <img src="./images/icon-dollar.svg" class="icon-dollar"></img>
           <input type="number" min="0" id="bill" name="bill" placeholder="0"> 
@@ -57,10 +59,12 @@
         </div>
       </div>
       <div class="people flex-start">
-        <label for="people">Number of People</label>
+        <div class="labelling">
+          <label for="people">Number of People</label><span class="error" id="error">Error</span>
+        </div>
         <div class="input-group">
           <img src="./images/icon-person.svg" class="icon-person"></img>
-          <input type="number" min="0" id="people" name="people" placeholder="0"> 
+          <input type="number" min="0" id="people" name="people" placeholder="0" invalid> 
         </div>
       </div>
       <div class="result flex-start">

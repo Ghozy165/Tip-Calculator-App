@@ -49,6 +49,14 @@ body {
     width: 100%;
     gap: .25rem;
 }
+.labelling {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    font-weight: 700;
+}
 
 .tip {
     width: 100%;
@@ -103,17 +111,13 @@ input {
     font-weight: 700;
     text-align: right;
 }
-
 input::placeholder { 
     color: var(--dark-grayish-cyan); 
 }
-
 input:focus {
     outline: none;
 }
 
-/* Remove Spinner */
-/* For Chrome, Safari, Edge, Opera */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none;
@@ -191,11 +195,25 @@ span {
     background-color: var(--light-grayish-cyan);
 }
 
+.tips-opt > button:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
 .active {
     background-color: var(--strong-cyan);
 }
 
-
 .focus {
     outline: 2px solid var(--strong-cyan);
+}
+
+.error {
+    display: none;
+    font-size: 1rem;
+    color: palevioletred;
+}
+
+.invalid {
+    border: 2px solid palevioletred;
 }
