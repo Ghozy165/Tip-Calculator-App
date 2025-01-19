@@ -27,6 +27,7 @@ body {
 }
 
 .container {
+    max-width: 1024px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +35,7 @@ body {
 }
 
 .banner {
-    margin: 2.5rem;
+    margin-bottom: clamp(2.5rem, 4.2vw, 5rem);
 }
 
 .card {
@@ -42,6 +43,11 @@ body {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding: 2rem;
+    gap: 2rem;
+}
+
+.card-calc, .card-result {
+    width: 100%;
     gap: 2rem;
 }
 
@@ -69,6 +75,7 @@ body {
 .tips {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
     grid-gap: 1rem;
 }
 .tips > .tips-opt {
@@ -124,12 +131,19 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-.result {
-    width: 100%;
+.card-result {
     background-color: var(--very-dark-cyan);
     border-radius: 1rem;
     padding: 1.5rem;
     gap: 1rem;
+}
+
+.result {
+    width: 100%;
+    /* background-color: var(--very-dark-cyan); */
+    /* border-radius: 1rem; */
+    /* padding: 1.5rem; */
+    /* gap: 1rem; */
     color: var(--very-light-grayish-cyan);
     font-size: 1rem;
     font-weight: 700;
@@ -216,4 +230,27 @@ span {
 
 .invalid {
     border: 2px solid palevioletred;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        border-radius: 1.5rem;
+        flex-direction: row;
+        justify-content: stretch;
+        align-items: stretch;
+    }
+    .tips {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+    .card-calc {
+        padding: 1rem
+    }
+    .card-result {
+        justify-content: space-between;
+        padding: 3rem;
+    }
+    .result {
+        gap: 2rem;
+    }
 }

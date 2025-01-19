@@ -26,60 +26,64 @@
       <img src="./images/logo.svg" alt="logo">
     </div>
     <div class="card flex-start">
-      <div class="bill flex-start">
-        <div class="labelling">
-          <label for="bill">Bill</label><span class="error" id="error">Error</span>
+      <div class="card-calc flex-start">
+        <div class="bill flex-start">
+          <div class="labelling">
+            <label for="bill">Bill</label><span class="error" id="error">Error</span>
+          </div>
+          <div class="input-group">
+            <img src="./images/icon-dollar.svg" class="icon-dollar"></img>
+            <input type="number" min="0" id="bill" name="bill" placeholder="0"> 
+          </div>
         </div>
-        <div class="input-group">
-          <img src="./images/icon-dollar.svg" class="icon-dollar"></img>
-          <input type="number" min="0" id="bill" name="bill" placeholder="0"> 
+        <div class="tip flex-start">
+          <label for="tip">Select Tip %</label>
+          <div class="tips">
+            <div class="tips-opt">
+              <button class="tip-5">5%</button>
+            </div>
+            <div class="tips-opt">
+              <button class="tip-10">10%</button>
+            </div>
+            <div class="tips-opt">
+              <button class="tip-15">15%</button>
+            </div>
+            <div class="tips-opt">
+              <button class="tip-25">25%</button>
+            </div>
+            <div class="tips-opt">
+              <button class="tip-50">50%</button>
+            </div>
+            <div class="tips-opt custom">
+              <input type="number" id="tip" name="tip" class="custom-tip-input" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+        <div class="people flex-start">
+          <div class="labelling">
+            <label for="people">Number of People</label><span class="error" id="error">Error</span>
+          </div>
+          <div class="input-group">
+            <img src="./images/icon-person.svg" class="icon-person"></img>
+            <input type="number" min="0" id="people" name="people" placeholder="0" invalid> 
+          </div>
         </div>
       </div>
-      <div class="tip flex-start">
-        <label for="tip">Select Tip %</label>
-        <div class="tips">
-          <div class="tips-opt">
-            <button class="tip-5">5%</button>
+      <div class="card-result flex-start">
+        <div class="result flex-start">
+          <div class="tip-amount flex-row">
+            <div>Tip Amount<br><span>/ person</span></div>
+            <div class="result-group">
+              <img src="./images/icon-dollar.svg"></img>
+              <p>0</p>
+            </div>
           </div>
-          <div class="tips-opt">
-            <button class="tip-10">10%</button>
-          </div>
-          <div class="tips-opt">
-            <button class="tip-15">15%</button>
-          </div>
-          <div class="tips-opt">
-            <button class="tip-25">25%</button>
-          </div>
-          <div class="tips-opt">
-            <button class="tip-50">50%</button>
-          </div>
-          <div class="tips-opt custom">
-            <input type="number" id="tip" name="tip" class="custom-tip-input" placeholder="Custom">
-          </div>
-        </div>
-      </div>
-      <div class="people flex-start">
-        <div class="labelling">
-          <label for="people">Number of People</label><span class="error" id="error">Error</span>
-        </div>
-        <div class="input-group">
-          <img src="./images/icon-person.svg" class="icon-person"></img>
-          <input type="number" min="0" id="people" name="people" placeholder="0" invalid> 
-        </div>
-      </div>
-      <div class="result flex-start">
-        <div class="tip-amount flex-row">
-          <div>Tip Amount<br><span>/ person</span></div>
-          <div class="result-group">
-            <img src="./images/icon-dollar.svg"></img>
-            <p>0</p>
-          </div>
-        </div>
-        <div class="total flex-row">
-          <div>Total<br><span>/ person</span></div>
-          <div class="result-group">
-            <img src="./images/icon-dollar.svg"></img>
-            <p>0</p>
+          <div class="total flex-row">
+            <div>Total<br><span>/ person</span></div>
+            <div class="result-group">
+              <img src="./images/icon-dollar.svg"></img>
+              <p>0</p>
+            </div>
           </div>
         </div>
         <button class="btn-reset">RESET</button>
