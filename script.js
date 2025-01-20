@@ -63,15 +63,33 @@ function resetCalculator() {
 }
 
 billEL.addEventListener('input', (e) => {
-    updateData('bill', parseFloat(e.target.value) || 0);
+    const billValue = parseFloat(e.target.value);
+    if (isNaN(billValue) || billValue < 0) {
+        billEL.value = '';
+        updateData('bill', 0);
+    } else {
+        updateData('bill', billValue);
+    }
 });
 
 peopleEl.addEventListener('input', (e) => {
-    updateData('people', parseInt(e.target.value) || 0);
+    const peopleValue = parseInt(e.target.value) || 0;
+    if (peopleValue < 0) {
+        peopleEl.value = '';
+        updateData('people', 0);
+    } else {
+        updateData('people', peopleValue);
+    }
 });
 
 tipPercentageEl.addEventListener('input', (e) => {
-    updateData('tipPercentage', parseFloat(e.target.value) || 0);
+    const tipValue = parseFloat(e.target.value) || 0;
+    if (tipValue < 0) {
+        tipPercentageEl.value = '';
+        updateData('tipPercentage', 0);
+    } else {
+        updateData('tipPercentage', tipValue);
+    }
     btnOpt.forEach((btn) => { 
         btn.classList.remove('active'); 
     });
