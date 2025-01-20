@@ -29,9 +29,9 @@
       <div class="card-calc flex-start">
         <div class="bill flex-start">
           <div class="labelling">
-            <label for="bill">Bill</label><span class="error" id="error">Error</span>
+            <label for="bill">Bill</label><span class="error" id="error-bill">Error</span>
           </div>
-          <div class="input-group">
+          <div class="input-group bill">
             <img src="./images/icon-dollar.svg" class="icon-dollar"></img>
             <input type="number" min="0" id="bill" name="bill" placeholder="0"> 
           </div>
@@ -61,7 +61,7 @@
         </div>
         <div class="people flex-start">
           <div class="labelling">
-            <label for="people">Number of People</label><span class="error" id="error">Error</span>
+            <label for="people">Number of People</label><span class="error" id="error-people">Can't be zero</span>
           </div>
           <div class="input-group">
             <img src="./images/icon-person.svg" class="icon-person"></img>
@@ -86,14 +86,16 @@
             </div>
           </div>
         </div>
-        <button class="btn-reset">RESET</button>
+        <button class="btn-reset" id="btn-reset" disabled>RESET</button>
       </div>
     </div>
   </main>
+
+  <script src="script.js"></script>
   
-  <!-- <footer class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer> -->
+    Coded by <a href="https://www.frontendmentor.io/profile/Ghozy165">Ghozy165</a>.
+  </footer>
 </body>
 </html>

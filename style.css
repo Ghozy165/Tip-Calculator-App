@@ -93,6 +93,14 @@ body {
     font-weight: 700;
     padding: .5rem;
 }
+.tips-opt > button:hover {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+.tips > .tips-opt > .active {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
 
 .tips > .tips-opt > input{
     width: 100%;
@@ -140,10 +148,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 .result {
     width: 100%;
-    /* background-color: var(--very-dark-cyan); */
-    /* border-radius: 1rem; */
-    /* padding: 1.5rem; */
-    /* gap: 1rem; */
     color: var(--very-light-grayish-cyan);
     font-size: 1rem;
     font-weight: 700;
@@ -208,18 +212,13 @@ span {
 .btn-reset:hover {
     background-color: var(--light-grayish-cyan);
 }
-
-.tips-opt > button:hover {
-    background-color: var(--light-grayish-cyan);
-    color: var(--very-dark-cyan);
+.btn-reset:disabled {
+    pointer-events: none;
+    filter: brightness(50%);
 }
 
 button {
     transition: all .3s ease-in-out;  
-}
-
-.active {
-    background-color: var(--strong-cyan);
 }
 
 .focus {
@@ -235,6 +234,7 @@ button {
 .invalid {
     border: 2px solid palevioletred;
 }
+
 
 @media screen and (min-width: 768px) {
     .card {
